@@ -9,7 +9,7 @@ class Node {
 function levelOrderTraversal(root) {
   let queue = root !== null ? [root] : [];
   let result = [];
-
+  
   while (queue.length) {
     const node = queue.shift();
 
@@ -22,6 +22,7 @@ function levelOrderTraversal(root) {
     if (node.right) {
       queue.push(node.right);
     }
+    console.log(queue)
   }
 
   return result.map(node => node.value);
